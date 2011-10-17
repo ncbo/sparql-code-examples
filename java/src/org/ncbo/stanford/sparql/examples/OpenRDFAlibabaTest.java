@@ -10,10 +10,6 @@ import org.openrdf.repository.sparql.SPARQLRepository;
 import org.openrdf.repository.sparql.config.SPARQLRepositoryConfig;
 import org.openrdf.repository.sparql.config.SPARQLRepositoryFactory;
 
-/**
- * 
- * http://repo.aduna-software.org/maven2/releases/org/openrdf/alibaba/alibaba-repository-sparql/
- */
 public class OpenRDFAlibabaTest {
 	
 	private String service = null;
@@ -67,16 +63,6 @@ public class OpenRDFAlibabaTest {
 			System.out.println(row.getBinding("ont").getValue() + " ---- " + 
 			row.getBinding("name").getValue() + " ---- " + row.getBinding("acr").getValue());
 		}
-		/*
-		Map<Thread,StackTraceElement[]> stacks = Thread.getAllStackTraces();
-		System.out.println("aaaaaa -> " + stacks.size());
-		for (Thread t : stacks.keySet()) {
-			System.out.println("Thread " + t.getName());
-			  StackTraceElement[] trace = (StackTraceElement[])stacks.get(t);
-	        for (int j = 0; j < trace.length; j++) {
-	            System.err.println("\tat " + trace[j]);
-	        }
-		} */
 		test.close();
 	}
 }
