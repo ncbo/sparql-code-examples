@@ -1,0 +1,1 @@
+This folder is an Eclipse Java project, see (.classpath and .project). Use the Eclipse import project tool to get it up and running. It is self-contained, no need to download and setup extra libraries.
