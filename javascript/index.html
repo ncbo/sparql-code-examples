@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>BioPortal SPARQL Query Example</title>
+    <script type="text/javascript" src="./sparql.js"></script>
+    <script type="text/javascript">
+    var sparqler = new SPARQL.Service("http://alphasparql.bioontology.org/sparql/");
+    var query = sparqler.createQuery();
+    var query_string = "PREFIX omv: <http://omv.ontoware.org/2005/05/ontology#>\n" +
+"SELECT ?ont ?name ?acr " +
+"WHERE { " +
+"	?ont a omv:Ontology .  " +
+"	?ont omv:acronym ?acr ." +
+"	?ont omv:name ?name . " +
+" }";
+    function onFailure(resp) {
+        console.log("error");
+        console.log(resp);
+    }
+    function onSuccess(json) {
+        var html = "<table border='1'>";
+        for (var b in json.results.bindings) {
+            html += "<tr>";
+            for (var x in json.head.vars) { 
+                var value = json.results.bindings[b][json.head.vars[x]];
+                if (value.type == "uri")
+                    html += "<td><a href='"+value.value+"'>" + value.value + "</a></td>";
+                else
+                    html += "<td>" + value.value + "</td>";
+            }
+            html += "</tr>";
+        }
+        html += "</table>";
+        document.getElementById("result").innerHTML = html;
+    }
+
+    query.query(query_string,
+		{failure: onFailure, success: onSuccess , apikey: "YOUR API KEY HERE" }
+	);
+    </script>
+  </head>
+   <body>
+   <h1>Simple HTML table populated from a SPARQL query</h1>
+   <div id="result"></div>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/jena-arq/arq-2.8.8-tests.jar"/>
+	<classpathentry kind="lib" path="lib/jena-arq/arq-2.8.8.jar"/>
+	<classpathentry kind="lib" path="lib/jena-arq/icu4j-3.4.4.jar"/>
+	<classpathentry kind="lib" path="lib/jena-arq/iri-0.8.jar"/>
+	<classpathentry kind="lib" path="lib/jena-arq/jena-2.6.4-tests.jar"/>
+	<classpathentry kind="lib" path="lib/jena-arq/jena-2.6.4.jar"/>
+	<classpathentry kind="lib" path="lib/jena-arq/junit-4.5.jar"/>
+	<classpathentry kind="lib" path="lib/jena-arq/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="lib/jena-arq/lucene-core-2.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/jena-arq/slf4j-api-1.5.8.jar"/>
+	<classpathentry kind="lib" path="lib/jena-arq/slf4j-log4j12-1.5.8.jar"/>
+	<classpathentry kind="lib" path="lib/jena-arq/stax-api-1.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/jena-arq/wstx-asl-3.2.9.jar"/>
+	<classpathentry kind="lib" path="lib/jena-arq/xercesImpl-2.7.1.jar"/>
+	<classpathentry kind="lib" path="lib/openrdf-alibaba/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/openrdf-alibaba/commons-codec-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/openrdf-alibaba/commons-dbcp-1.2.2.jar"/>
+	<classpathentry kind="lib" path="lib/openrdf-alibaba/commons-httpclient-3.1.jar"/>
+	<classpathentry kind="lib" path="lib/openrdf-alibaba/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/openrdf-alibaba/commons-pool-1.3.jar"/>
+	<classpathentry kind="lib" path="lib/openrdf-alibaba/httpcore-4.1.3.jar"/>
+	<classpathentry kind="lib" path="lib/openrdf-alibaba/httpcore-nio-4.1.3.jar"/>
+	<classpathentry kind="lib" path="lib/openrdf-alibaba/javassist-3.11.0.GA.jar"/>
+	<classpathentry kind="lib" path="lib/openrdf-alibaba/openrdf-sesame-2.4.2-onejar.jar"/>
+	<classpathentry kind="lib" path="lib/openrdf-alibaba/slf4j-api-1.5.10.jar"/>
+	<classpathentry kind="lib" path="lib/openrdf-alibaba/slf4j-jdk14-1.5.10.jar"/>
+	<classpathentry kind="lib" path="lib/openrdf-alibaba/openrdf-alibaba-2.0-beta12.jar"/>
+	<classpathentry kind="lib" path="lib/openrdf-alibaba/alibaba-repository-sparql-2.0-beta9-patched.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
