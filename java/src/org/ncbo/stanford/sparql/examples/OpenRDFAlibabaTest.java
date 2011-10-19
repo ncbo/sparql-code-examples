@@ -41,7 +41,7 @@ public class OpenRDFAlibabaTest {
 	}
 	public static void main(String[] args) throws Exception {
 		
-		String sparqlService = "http://localhost:8080/sparql";
+		String sparqlService = "http://alphasparql.bioontology.org/sparql";
 		String apikey = "YOUR API KEY HERE";
 
 		/*
