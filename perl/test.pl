@@ -3,7 +3,7 @@
 use sparql;
 use strict;
 
-my $endpoint = "http://alphasparql.bioontology.org/sparql";
+my $endpoint = "http://sparql.bioontology.org/sparql";
 my $apikey = "YOUR API KEY HERE";
 
 my $query_string = <<END;

@@ -10,7 +10,7 @@ var query_string = "PREFIX omv: <http://omv.ontoware.org/2005/05/ontology#>\n" +
 var apikey =  "Your API KEY!";
 
 var options = {
-  host: 'alphasparql.bioontology.org',
+  host: 'sparql.bioontology.org',
   port: 8080,
   path: '/sparql?query=' +encodeURIComponent(query_string) + "&apikey=" + encodeURIComponent(apikey),
   headers: {

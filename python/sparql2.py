@@ -8,7 +8,7 @@ import pdb
 
 if __name__ == "__main__":
     #Eventually alphasparql will be moved to http://sparql.bioontology.org/sparql/
-    sparql_service = "http://alphasparql.bioontology.org/sparql/"
+    sparql_service = "http://sparql.bioontology.org/sparql/"
 
     #To get your API key register at http://bioportal.bioontology.org/accounts/new
     api_key = "YOUR API KEY"

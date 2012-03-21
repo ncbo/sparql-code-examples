@@ -32,7 +32,7 @@ public class JenaARQTest {
 
 	}
 	public static void main(String[] args) throws Exception {
-		String sparqlService = "http://alphasparql.bioontology.org/sparql";
+		String sparqlService = "http://sparql.bioontology.org/sparql";
 		String apikey = "YOUR API KEY";
 
 		/*
