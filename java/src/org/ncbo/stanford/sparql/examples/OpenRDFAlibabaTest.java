@@ -46,7 +46,7 @@ public class OpenRDFAlibabaTest {
 
 		/*
 		 * More query examples here:
-		 * http://alphasparql.bioontology.org/examples
+		 * http://sparql.bioontology.org/examples
 		 */
 		String query = "PREFIX omv: <http://omv.ontoware.org/2005/05/ontology#> " +
 					   "SELECT ?ont ?name ?acr " +
