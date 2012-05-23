@@ -1,4 +1,4 @@
-""" Simple Python script to query "http://alphasparql.bioontology.org/sparql/"
+""" Simple Python script to query "http://sparql.bioontology.org/sparql/"
     This script uses the SPARQLWrapper Python lib. Download and install from:
         http://sparql-wrapper.sourceforge.net/
 """
@@ -7,7 +7,6 @@ from SPARQLWrapper import SPARQLWrapper, JSON, XML, N3, RDF
 import pdb
 
 if __name__ == "__main__":
-    #Eventually alphasparql will be moved to http://sparql.bioontology.org/sparql/
     sparql_service = "http://sparql.bioontology.org/sparql/"
 
     #To get your API key register at http://bioportal.bioontology.org/accounts/new
