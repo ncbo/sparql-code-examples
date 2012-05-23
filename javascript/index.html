@@ -3,21 +3,30 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <title>BioPortal SPARQL Query Example</title>
-    <script type="text/javascript" src="./sparql.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="sparql.js"></script>
     <script type="text/javascript">
-    var sparqler = new SPARQL.Service("http://alphasparql.bioontology.org/sparql/");
-    var query = sparqler.createQuery();
-    var query_string = "PREFIX omv: <http://omv.ontoware.org/2005/05/ontology#>\n" +
-"SELECT ?ont ?name ?acr " +
-"WHERE { " +
-"	?ont a omv:Ontology .  " +
-"	?ont omv:acronym ?acr ." +
-"	?ont omv:name ?name . " +
-" }";
-    function onFailure(resp) {
+
+   var bioportal = new SPARQL({ 
+           apikey: "YOUR-API-KEY-HERE", 
+           endpoint: "http://sparql.bioontology.org/sparql/"
+         });
+
+    var query_string = "PREFIX omv: <http://omv.ontoware.org/2005/05/ontology#>\n\
+                        SELECT ?ont ?name ?acr \n\
+                        WHERE { \n\
+                           ?ont a omv:Ontology .  \n\
+                           ?ont omv:acronym ?acr.  \n\
+                           ?ont omv:name ?name .\n\
+                           FILTER (str(?acr)='SNOMEDCT')\n\
+                        }";
+
+    function onFailure(xhr, status) {
+        document.getElementById("result").innerHTML = status + " (See console.)";
         console.log("error");
-        console.log(resp);
+        console.log(xhr);
     }
+
     function onSuccess(json) {
         var html = "<table border='1'>";
         for (var b in json.results.bindings) {
@@ -35,13 +44,12 @@
         document.getElementById("result").innerHTML = html;
     }
 
-    query.query(query_string,
-		{failure: onFailure, success: onSuccess , apikey: "YOUR API KEY HERE" }
-	);
+    bioportal.query(query_string).done(onSuccess).error(onFailure);
+
     </script>
   </head>
    <body>
    <h1>Simple HTML table populated from a SPARQL query</h1>
-   <div id="result"></div>
+   <div id="result">Fetching ontology data...</div>
   </body>
 </html>
