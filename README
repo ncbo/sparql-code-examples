@@ -1,5 +1,4 @@
-
-This repository contains code examples to query alphasparql.bioontology.org.
+This repository contains code examples to query sparql.bioontology.org.
 
 Examples are provided for the following platforms/languages:
     - Java:
@@ -30,14 +29,12 @@ Extra notes
 
 * BSD 2-clause license ("Simplified BSD License" or "FreeBSD License") applies to this repository, see COPYING file.
 
-* Eventually alphasparql.bioontology.org will be redirected to sparql.bioontology.org
-
 * If you do not have an account in BioPortal you'll need one to use the service. 
   Register at http://bioportal.bioontology.org/accounts/new
 
 * Please visit the following links to get extra information about this service:
-    - http://alphasparql.bioontology.org/policy
-    - http://alphasparql.bioontology.org/alpha
+    - http://www.bioontology.org/wiki/index.php/SPARQL_BioPortal
+    - http://www.bioontology.org/wiki/index.php/SPARQL_Release_Notes_And_Usage_Policy
 
 --------
 Support
