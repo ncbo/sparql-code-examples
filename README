@@ -1,5 +1,12 @@
 This repository contains code examples to query sparql.bioontology.org.
 
+At sparql.bioontology.org we host two databases:
+
+* sparql.bioontology.org/ontologies/sparql to host ontology metadata and content.
+* sparql.bioontology.org/mappings/sparql to host BioPortal's  mappings.
+
+By default queries pointing to sparql.bioontology.org/sparql use the ontologies endpoint. To issue queries that target data from both endpoints see related information and examples on SPARQL federation. 
+
 Examples are provided for the following platforms/languages:
     - Java:
         * Java with no 3-party libs (SimpleTest.java)
