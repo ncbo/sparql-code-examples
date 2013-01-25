@@ -2,12 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="lib/jena-arq/arq-2.8.8-tests.jar"/>
-	<classpathentry kind="lib" path="lib/jena-arq/arq-2.8.8.jar"/>
 	<classpathentry kind="lib" path="lib/jena-arq/icu4j-3.4.4.jar"/>
-	<classpathentry kind="lib" path="lib/jena-arq/iri-0.8.jar"/>
-	<classpathentry kind="lib" path="lib/jena-arq/jena-2.6.4-tests.jar"/>
-	<classpathentry kind="lib" path="lib/jena-arq/jena-2.6.4.jar"/>
 	<classpathentry kind="lib" path="lib/jena-arq/junit-4.5.jar"/>
 	<classpathentry kind="lib" path="lib/jena-arq/log4j-1.2.14.jar"/>
 	<classpathentry kind="lib" path="lib/jena-arq/lucene-core-2.3.1.jar"/>
@@ -30,5 +25,10 @@
 	<classpathentry kind="lib" path="lib/openrdf-alibaba/slf4j-jdk14-1.5.10.jar"/>
 	<classpathentry kind="lib" path="lib/openrdf-alibaba/openrdf-alibaba-2.0-beta12.jar"/>
 	<classpathentry kind="lib" path="lib/openrdf-alibaba/alibaba-repository-sparql-2.0-beta9-patched.jar"/>
+	<classpathentry kind="lib" path="lib/jena-arq/jena-arq-2.9.4-tests.jar"/>
+	<classpathentry kind="lib" path="lib/jena-arq/jena-arq-2.9.4.jar"/>
+	<classpathentry kind="lib" path="lib/jena-arq/jena-core-2.7.4-tests.jar"/>
+	<classpathentry kind="lib" path="lib/jena-arq/jena-core-2.7.4.jar"/>
+	<classpathentry kind="lib" path="lib/jena-arq/jena-iri-0.9.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
