@@ -23,27 +23,32 @@ public class JenaARQFederationExample {
 				 DatasetImpl(ModelFactory.createDefaultModel()));
 		 return exec.execSelect();
 
-
-		 //qexec.addParam("apikey", this.apikey);
-
-
 	}
 	public static void main(String[] args) throws Exception {
+		
+		/**
+		 * For documentation please read "Federated SPARQL queries"
+		 *  at http://www.bioontology.org/wiki/index.php/SPARQL_BioPortal 
+		 */
 
-		String query = "PREFIX omv: <http://omv.ontoware.org/2005/05/ontology#> " +
-					   "SELECT DISTINCT ?ont " +
-					   "WHERE { " +
-					   "SERVICE <http://stagesparql.bioontology.org/ontologies/sparql/?apikey=73f776e6-e21b-4bce-8420-24f9a3670dbb> { " +
-					   "?ont a omv:Ontology; . }" +
-					   "" +
-					   "}";
+		String query = "PREFIX map: <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#> \n" +
+				"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> \n" +
+				"PREFIX skos: <http://www.w3.org/2004/02/skos/core#> \n" + 
+				"SELECT DISTINCT ?mappedParent WHERE {\n" + 
+				"    SERVICE <http://stagesparql.bioontology.org/mappings/sparql/?apikey=YOUR API KEY HERE> {\n" + 
+				"        ?mapping map:target <http://purl.bioontology.org/ontology/CSP/0468-5952> .\n" + 
+				"        ?mapping map:source ?source .\n" + 
+				"    }\n" + 
+				"    SERVICE <http://stagesparql.bioontology.org/ontologies/sparql/?apikey=YOUR API KEY HERE> {\n" + 
+				"        ?source rdfs:subClassOf ?mappedParent .\n" +
+				"    }\n" +
+				"}";
 		
 		JenaARQFederationExample test = new JenaARQFederationExample();
 		ResultSet results = test.executeQuery(query);
 		    for ( ; results.hasNext() ; ) {
 		      QuerySolution soln = results.nextSolution() ;
-		      RDFNode type = soln.get("ont") ;
-		      System.out.println(type);
+		      System.out.println(soln);
 		    }
 	}
 }
