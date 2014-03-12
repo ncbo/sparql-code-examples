@@ -6,7 +6,7 @@ require 'sparql/client'
 
 apikey = ""
 
-endpoint = SPARQL::Client.new("http://sparql.bioontology.org/sparql/?apikey=#{apikey}")
+endpoint = SPARQL::Client.new("http://sparql.bioontology.org/sparql/?apikey=#{apikey}", {method: :get})
 
 query = <<-EOS
 PREFIX omv: <http://omv.ontoware.org/2005/05/ontology#>
