@@ -30,7 +30,7 @@ if __name__ == "__main__":
     sparql_service = "http://alphasparql.bioontology.org/sparql/"
 
     #To get your API key register at http://bioportal.bioontology.org/accounts/new
-    api_key = "73f776e6-e21b-4bce-8420-24f9a3670dbb"
+    api_key = "YOUR API KEY"
 
 
     query_string = """SELECT DISTINCT ?p WHERE { ?s ?p ?o }"""
